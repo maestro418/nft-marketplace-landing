@@ -1,0 +1,109 @@
+@use './variable';
+
+* {
+  $scrollRound : 10px;
+  $scrollWidth : 4px;
+  $scrollHeight: 4px;
+  $scrollBG_track : #858584;
+  $scrollBG_thumb : #A259FF;
+  $scrollColor : #26384c #A259FF;
+
+  box-sizing: border-box;
+  scrollbar-width: $scrollWidth;
+  scrollbar-color: $scrollColor;
+
+  &::-webkit-scrollbar {
+    width: $scrollWidth;
+    height: $scrollHeight;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $scrollBG_track;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: $scrollRound;
+    background-color: $scrollBG_thumb;
+  }
+}
+.special-section {
+  position: relative;
+
+  margin: 0px;
+  padding: 0px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('../images/special.png');
+
+  >div {
+    max-width: 100% !important;
+    background: linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, #a259ff 100%);
+  }
+}
+
+.bg-nft-container {
+  background-image: url('../images/bg2.png');
+
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (min-width: variable.$sm) {
+    height: 50vh;
+  }
+
+  @media (min-width: variable.$lg) {
+    height: 70vh;
+  }
+}
+
+.bg-profile-container {
+  width: 100%;
+  height: 320px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  background-image: url('../images/bg1.png');
+
+  padding: 0px 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  .avatar-container {
+    bottom: -50px;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 1440px;
+
+    img {
+      width: 100px;
+      border: 2px solid variable.$primary;
+      border-radius: 20px;
+    }
+  }
+
+  @media (min-width: variable.$xs) {
+    padding: 0px 4vw;
+
+    .avatar-container {
+      justify-content: start;
+    }
+  }
+
+  @media (min-width: variable.$sm) {
+
+
+    .avatar-container {
+      bottom: -60px;
+
+      img {
+        width: max-content;
+      }
+    }
+  }
+}

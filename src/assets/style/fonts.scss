@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'WorkSans';
+  src: url('./fonts/WorkSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'SpaceMono';
+  src: url('./fonts/SpaceMono-Regular.ttf');
+}
+
+.SpaceMono {
+  font-family: SpaceMono;
+}
+
+.WorkSans {
+  font-family: WorkSans;
+}
